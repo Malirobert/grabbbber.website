@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grabbber - The Best Video Downloader Tool</title>
+    <link rel="icon" type="image/png" href="images/grabbber.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        
+        .platform-icon {
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        
+        .platform-icon:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: #3b82f6;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .grabbber-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .wave-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-shape svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        
+        .wave-shape .shape-fill {
+            fill: #FFFFFF;
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .quality-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.25rem;
+        }
+        
+        .animate-gradient-x {
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white">
+                            <i class="fas fa-hand-pointer text-xl"></i>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-blue-600">Grabbber</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#promo" class="animate-gradient-x bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500 text-white px-4 py-2 rounded-md hover:shadow-xl transition duration-300">Promo</a>
+                    <div class="group relative">
+                        <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                        <div class="hidden group-hover:block absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg">
+                            <a href="#grabbber" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grabbber</a>
+                            <a href="#grabbber-ai" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grabbber AI Agents</a>
+                        </div>
+                    </div>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
+                    <div class="group relative">
+                        <a href="insights.html" class="text-gray-700 hover:text-blue-600 transition">Insights</a>
+                        <div class="hidden group-hover:block absolute z-50 mt-2 w-80 bg-white rounded-md shadow-lg p-4">
+                            <p class="text-sm text-gray-600">Find out the most downloaded videos from various areas such as Movies, Music, Entertainment, Adult and more</p>
+                        </div>
+                    </div>
+                    <a href="#download" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Install Extensions</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">The 2 Best Free <span class="text-blue-200">Video Downloaders</span> in the World</h1>
+                    <p class="text-xl mb-8 text-blue-100">Download videos from YouTube, Instagram, TikTok and many more with our 2 completely free powerful tools.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#download" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium text-center hover:bg-blue-50 transition btn-glow">Install Extensions</a>
+                        <a href="#how-it-works" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium text-center hover:bg-white hover:text-blue-600 transition">View Demos</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in">
+                    <div class="relative">
+                        <div class="w-64 h-64 bg-white rounded-2xl shadow-xl flex items-center justify-center p-6 grabbber-icon">
+                            <div class="w-full h-full gradient-bg rounded-xl flex items-center justify-center">
+                                <i class="fas fa-hand-pointer text-6xl text-white"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-blue-400 rounded-full opacity-20"></div>
+                        <div class="absolute -top-6 -right-6 w-20 h-20 bg-blue-300 rounded-full opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Download from all your favorite platforms</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="flex flex-col items-center">
+                    <div class="platform-icon">
+                        <i class="fab fa-youtube text-5xl text-red-600"></i>
+                    </div>
+                    <span class="mt-2 font-medium">YouTube</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="platform-icon">
+                        <i class="fab fa-instagram text-5xl text-pink-600"></i>
+                    </div>
+                    <span class="mt-2 font-medium">Instagram</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="platform-icon">
+                        <i class="fab fa-tiktok text-5xl text-black"></i>
+                    </div>
+                    <span class="mt-2 font-medium">TikTok</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="platform-icon">
+                        <i class="fa-solid fa-ban text-5xl text-red-300"></i>
+                    </div>
+                    <span class="mt-2 font-medium">Xvideos/Pornhub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">Why Choose Grabbber?</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">The simplest and most powerful solution to download videos from any website.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Instant Download</h3>
+                    <p class="text-gray-600 text-center">Download videos with a single click without leaving your current page. No need to open new tabs or apps.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-robot text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Smart AI Agents</h3>
+                    <p class="text-gray-600 text-center">Our AI agents can download videos automatically based on your prompts. Just ask " I want a video whose the title is (Video_title) from the channel (Channel_name)" and it's done!</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-3">Guaranteed Security</h3>
+                    <p class="text-gray-600 text-center">100% secure extension that doesn't collect any personal data. Your videos remain private.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">How It Works</h2>
+            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">Watch our demos to see Grabbber in action.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Grabbber Demo</h3>
+                    <p class="text-gray-600 mb-4">See how easy it is to download videos with Grabbber.</p>
+                    <div class="rounded-xl overflow-hidden shadow-lg h-full">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="path/to/grabbber-ai-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Grabbber AI Agents Demo</h3>
+                    <p class="text-gray-600 mb-4">Watch how AI agents can automate your downloads.</p>
+                    <div class="rounded-xl overflow-hidden shadow-lg h-full">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="path/to/grabbber-ai-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">Choose Your Grabbber</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="pricing-card bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-2">Grabbber</h3>
+                    <p class="text-gray-600 text-center mb-6">Download videos by selecting them</p>
+                    <div class="text-5xl font-bold text-center mb-6">FREE</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>10 videos per day</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>All supported platforms</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Video quality: 
+                                <span class="quality-badge bg-gray-200 text-gray-800">144p</span>
+                                <span class="quality-badge bg-gray-200 text-gray-800">240p</span>
+                                <span class="quality-badge bg-gray-200 text-gray-800">360p</span>
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Ads included</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-800 py-3 rounded-md font-medium hover:bg-gray-300 transition flex items-center justify-center">
+                        <i class="fab fa-edge mr-2"></i>
+                        Add to Edge
+                    </button>
+                </div>
+                <div class="pricing-card bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-2">Grabbber AI Agents</h3>
+                    <p class="text-gray-600 text-center mb-6">Download videos by describing them</p>
+                    <div class="text-5xl font-bold text-center mb-6">FREE</div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>10 videos per day</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Just Youtube</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Video quality: 
+                                <span class="quality-badge bg-blue-100 text-blue-800">720p</span>
+                                <span class="quality-badge bg-blue-100 text-blue-800">1080p</span>
+                                <span class="quality-badge bg-blue-100 text-blue-800">4K</span>
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Ads included</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-blue-600 text-white py-3 rounded-md font-medium hover:bg-blue-700 transition btn-glow flex items-center justify-center">
+                        <i class="fab fa-edge mr-2"></i>
+                        Add to Edge
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-16 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to download videos effortlessly?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Install Grabbber and Grabbber AI Agents now and start downloading videos from any site.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white text-blue-600 px-8 py-4 rounded-md font-bold text-lg hover:bg-blue-50 transition flex items-center justify-center space-x-2">
+                    <i class="fab fa-edge text-2xl"></i>
+                    <span>Add Grabbber to Edge</span>
+                </button>
+                <button class="bg-gray-900 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-800 transition flex items-center justify-center space-x-2">
+                    <i class="fab fa-edge text-2xl"></i>
+                    <span>Add Grabbber AI Agents to Edge</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                        <span>Is Grabbber legal to use?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="p-4 hidden">
+                        <p class="text-gray-600">Grabbber is a legal tool that respects copyright. However, it is your responsibility to only download content for which you have rights or permission.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                        <span>What video formats are supported?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="p-4 hidden">
+                        <p class="text-gray-600">We support only MP4 format for the moment.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                        <span>How do Grabbber and Grabbber AI Agents work?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="p-4 hidden">
+                        <p class="text-gray-600 mb-4"><strong>Grabbber:</strong> Simply select any video from your feed and it will be added to a download panel. You can select multiple videos at once, and when you're ready, click the "Download All" button. All selected videos will be downloaded one by one and saved to your computer.</p>
+                        <p class="text-gray-600"><strong>Grabbber AI Agents:</strong> Just describe the video you want, for example: "I want the official music video of God's Plan by Drake". Click "Research" and the AI will go through several steps including improving your description, searching, and finding the exact video. Once found, the video will be displayed, and you can click "Download" to start the downloading process and once downloaded, the video will be saved to your computer.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                        <span>Are Grabbber and Grabbber AI Agents completely free?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="p-4 hidden">
+                        <p class="text-gray-600">Yes, both Grabbber and Grabbber AI Agents are free to use with a limit of 10 videos per day. You can upgrade to remove this limit and access additional features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+            
+            <div class="grid gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                            <span class="text-blue-600 font-bold text-xl">R</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg">Robert</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"I've tried many video downloaders before, but Grabbber is on another level! The AI feature is mind-blowing - I just describe what I want, and it finds and downloads it automatically. This tool has saved me countless hours of searching and downloading videos manually."</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                            <span class="text-pink-600 font-bold text-xl">H</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg">Hortance</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Absolutely incredible! The ability to select multiple videos and download them all at once is fantastic. And the AI Agents? Pure genius! I can't believe how accurate it is at finding exactly the videos I'm looking for. This is the future of video downloading!"</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                            <span class="text-green-600 font-bold text-xl">P</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-bold text-lg">Patient</h3>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"What sets Grabbber apart is how intuitive it is. The download panel is so well designed, and the AI Agents feature is revolutionary. Being able to simply describe a video and have it found and downloaded automatically is something I never thought possible. Definitely a game-changer!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <span class="ml-2 text-xl font-bold">Grabbber</span>
+                    </div>
+                    <p class="text-gray-400">The ultimate tools to download videos from any website.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="https://www.instagram.com/grabbber.site/#/" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition">Terms</a></li>
+                        <li><a href="mailto:contact@grabbber.site" class="text-gray-400 hover:text-white transition">contact@grabbber.site</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Grabbber All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.border button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state
+        fadeElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // Check on load and scroll
+        window.addEventListener('load', fadeInOnScroll);
+        window.addEventListener('scroll', fadeInOnScroll);
+    </script>
+</body>
+</html>
