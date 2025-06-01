@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="images/grabbber.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+    <script type='text/javascript' src='//pl26629543.profitableratecpm.com/2c/d1/06/2cd106f7f44fd374d5a906725f58318c.js'></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -34,6 +36,11 @@
     </style>
 </head>
 <body>
+    <!-- Top Banner Ad -->
+    <div class="w-full flex justify-center py-2 bg-gray-100">
+        <ins class="eas6a97888e2" data-zoneid="5627274"></ins>
+    </div>
+    
     <!-- Header -->
     <header class="bg-white shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -128,6 +135,30 @@
 
         // Initialize with all videos
         filterVideos('All');
+    </script>
+    <!-- Bottom Banner Ad -->
+    <div class="w-full flex justify-center py-2 bg-gray-100">
+        <ins class="eas6a97888e2" data-zoneid="5627274"></ins>
+    </div>
+
+    <script>
+        // Initialize banner ads
+        (AdProvider = window.AdProvider || []).push({"serve": {}});
+
+        // Add popunder to all clickable elements except promo buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const clickableElements = document.querySelectorAll('a, button:not(.promo), .video-card');
+            clickableElements.forEach(element => {
+                element.addEventListener('click', function(e) {
+                    // Force trigger the popunder
+                    const popunderScript = document.createElement('script');
+                    popunderScript.src = '//pl26629543.profitableratecpm.com/2c/d1/06/2cd106f7f44fd374d5a906725f58318c.js';
+                    document.body.appendChild(popunderScript);
+                });
+            });
+        });
+
+
     </script>
 </body>
 </html>
