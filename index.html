@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grabbber - The Best Video Downloader Tool</title>
     <link rel="icon" type="image/png" href="images/grabbber.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4894392170135242"
+     crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -267,66 +268,10 @@
                     <p class="text-gray-600 mb-4">See how easy it is to download videos with Grabbber.</p>
                     <div class="rounded-xl overflow-hidden shadow-lg h-full">
                         <div class="aspect-w-16 aspect-h-9">
-                            <div id="demo-video-container" class="relative w-full h-full">
-                                <video id="demo-video" class="w-full h-full object-cover" controls>
-                                    <source src="videos/Grabbber_demo_compressed.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div id="demo-ad-container" class="absolute top-0 left-0 w-full h-full bg-black hidden">
-                                    <video id="demo-ad-video" class="w-full h-full">
-                                        <source src="" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-                            <script>
-                                // Initialize VAST for demo video
-                                const demoVideo = document.getElementById('demo-video');
-                                const demoAdContainer = document.getElementById('demo-ad-container');
-                                const demoAdVideo = document.getElementById('demo-ad-video');
-                                const vastUrl = 'https://s.magsrv.com/v1/vast.php?idzone=5627290';
-                                
-                                function playAd(video, adVideo, adContainer, originalSrc, onAdComplete) {
-                                    video.pause();
-                                    adVideo.src = vastUrl;
-                                    adContainer.classList.remove('hidden');
-                                    
-                                    adVideo.onloadedmetadata = function() {
-                                        adVideo.play();
-                                    };
-                                    
-                                    adVideo.onended = function() {
-                                        adContainer.classList.add('hidden');
-                                        video.src = originalSrc;
-                                        video.load();
-                                        if (onAdComplete) onAdComplete();
-                                    };
-                                }
-                                
-                                // Pre-roll
-                                demoVideo.onplay = function() {
-                                    if (!this.vastPlayed) {
-                                        this.vastPlayed = true;
-                                        const originalSrc = this.currentSrc;
-                                        playAd(demoVideo, demoAdVideo, demoAdContainer, originalSrc, () => demoVideo.play());
-                                    }
-                                };
-                                
-                                // Pause-roll
-                                demoVideo.onpause = function() {
-                                    if (!this.paused || this.ended) return;
-                                    if (!this.pauseVastPlayed) {
-                                        this.pauseVastPlayed = true;
-                                        const originalSrc = this.currentSrc;
-                                        playAd(demoVideo, demoAdVideo, demoAdContainer, originalSrc);
-                                    }
-                                };
-                                
-                                // Post-roll
-                                demoVideo.onended = function() {
-                                    const originalSrc = this.currentSrc;
-                                    playAd(demoVideo, demoAdVideo, demoAdContainer, originalSrc);
-                                };
-                            </script>
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="videos/Grabbber_demo_compressed.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -363,48 +308,10 @@
                     <p class="text-gray-600 mb-4">Watch how AI agents feature can automate your downloads.</p>
                     <div class="rounded-xl overflow-hidden shadow-lg h-full">
                         <div class="aspect-w-16 aspect-h-9">
-                            <div id="ai-demo-video-container" class="relative w-full h-full">
-                                <video id="ai-demo-video" class="w-full h-full object-cover" controls>
-                                    <source src="videos/Grabbber_ai_agents_demo_compressed.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <div id="ai-demo-ad-container" class="absolute top-0 left-0 w-full h-full bg-black hidden">
-                                    <video id="ai-demo-ad-video" class="w-full h-full">
-                                        <source src="" type="video/mp4">
-                                    </video>
-                                </div>
-                            </div>
-                            <script>
-                                // Initialize VAST for AI demo video
-                                const aiDemoVideo = document.getElementById('ai-demo-video');
-                                const aiDemoAdContainer = document.getElementById('ai-demo-ad-container');
-                                const aiDemoAdVideo = document.getElementById('ai-demo-ad-video');
-                                
-                                // Pre-roll
-                                aiDemoVideo.onplay = function() {
-                                    if (!this.vastPlayed) {
-                                        this.vastPlayed = true;
-                                        const originalSrc = this.currentSrc;
-                                        playAd(aiDemoVideo, aiDemoAdVideo, aiDemoAdContainer, originalSrc, () => aiDemoVideo.play());
-                                    }
-                                };
-                                
-                                // Pause-roll
-                                aiDemoVideo.onpause = function() {
-                                    if (!this.paused || this.ended) return;
-                                    if (!this.pauseVastPlayed) {
-                                        this.pauseVastPlayed = true;
-                                        const originalSrc = this.currentSrc;
-                                        playAd(aiDemoVideo, aiDemoAdVideo, aiDemoAdContainer, originalSrc);
-                                    }
-                                };
-                                
-                                // Post-roll
-                                aiDemoVideo.onended = function() {
-                                    const originalSrc = this.currentSrc;
-                                    playAd(aiDemoVideo, aiDemoAdVideo, aiDemoAdContainer, originalSrc);
-                                };
-                            </script>
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="videos/Grabbber_ai_agents_demo_compressed.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -781,22 +688,6 @@
         window.addEventListener('load', fadeInOnScroll);
         window.addEventListener('scroll', fadeInOnScroll);
     </script>
-    <script>
-        // Mid-page popup
-        window.addEventListener('scroll', function() {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const pageHeight = document.documentElement.scrollHeight;
-            
-            if (scrollPosition >= pageHeight / 2) {
-                // Load the video popup
-                const popupScript = document.createElement('script');
-                popupScript.src = 'https://s.magsrv.com/splash.php?idzone=5627288';
-                document.body.appendChild(popupScript);
-                
-                // Remove the scroll listener after showing popup
-                window.removeEventListener('scroll', arguments.callee);
-            }
-        });
-    </script>
 </body>
 </html>
+
