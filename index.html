@@ -129,7 +129,6 @@
             }
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/vast-player@0.2/dist/vast-player.min.js"></script>
 </head>
 <body class="text-gray-800">
     <!-- Navigation -->
@@ -274,7 +273,7 @@
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div id="grabbberDemoAd" class="absolute top-0 left-0 w-full h-full hidden"></div>
+                        <div id="grabbberDemoAd" class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden"></div>
                     </div>
                 </div>
             </div>
@@ -705,65 +704,3 @@
     </script>
 </body>
 </html>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const videoElement = document.getElementById('grabbberDemo');
-        const adContainer = document.getElementById('grabbberDemoAd');
-        let adPlayed = false;
-        
-        // URL de la publicité VAST
-        const vastUrl = 'https://s.magsrv.com/v1/vast.php?idzone=5627290';
-        
-        videoElement.addEventListener('play', function() {
-            if (!adPlayed) {
-                videoElement.pause();
-                
-                // Afficher le conteneur de pub
-                adContainer.classList.remove('hidden');
-                
-                // Charger la publicité VAST
-                fetch(vastUrl)
-                    .then(response => response.text())
-                    .then(vastXml => {
-                        // Créer un élément vidéo pour la publicité
-                        const adVideo = document.createElement('video');
-                        adVideo.className = 'w-full h-full';
-                        adVideo.controls = true;
-                        
-                        // Extraire l'URL de la vidéo du VAST XML
-                        const parser = new DOMParser();
-                        const xmlDoc = parser.parseFromString(vastXml, 'text/xml');
-                        const mediaFile = xmlDoc.querySelector('MediaFile');
-                        
-                        if (mediaFile) {
-                            adVideo.src = mediaFile.textContent;
-                            adContainer.appendChild(adVideo);
-                            
-                            // Lancer la publicité
-                            adVideo.play();
-                            
-                            // Quand la pub est terminée
-                            adVideo.addEventListener('ended', function() {
-                                adContainer.classList.add('hidden');
-                                adContainer.innerHTML = '';
-                                adPlayed = true;
-                                videoElement.play();
-                            });
-                        } else {
-                            // Si pas de publicité, lancer la vidéo principale
-                            adContainer.classList.add('hidden');
-                            adPlayed = true;
-                            videoElement.play();
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Erreur lors du chargement de la publicité:', error);
-                        adContainer.classList.add('hidden');
-                        adPlayed = true;
-                        videoElement.play();
-                    });
-            }
-        });
-    });
-</script>
