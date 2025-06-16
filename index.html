@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grabbber - The Best Video Downloader Tool</title>
-    <link rel="icon" type="image/png" href="images/grabbber.png">
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="DdHpoxjlHZcBTGqG9dhM1w" async></script>
+    <meta name="description" content="Download videos from YouTube, Instagram, TikTok, and adult sites with Grabbber.site - The best free video downloader Chrome extension. Save videos in HD, 4K quality without watermark.">
+    <meta name="keywords" content="video download extension, chrome extension video downloader, video downloader professional extension, download videos from any website, tiktok video downloader extension, instagram video downloader extension, youtube video downloader extension, video downloader chrome extension">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Online Video Downloader - Grabbber.site">
+    <meta property="og:description" content="Download videos from popular platforms with Grabbber.site, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!">
+    <title>Download videos from popular platforms with Grabbber.site - Best Free Video Downloader Extension</title>
+    <link rel="icon" type="image/png" href="images/grabbber.png" alt="Grabbber Extension Logo">
+    <link rel="preload" href="images/grabbber.png" as="image">
+    <link rel="preload" href="videos/Grabbber_demo_compressed.mp4" as="video">
+    <link rel="preload" href="videos/Grabbber_ai_agents_demo_compressed.mp4" as="video">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLN5WMZ6F0"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DLN5WMZ6F0');
+  </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -136,8 +154,8 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white">
-                            <i class="fas fa-hand-pointer text-xl"></i>
+                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white" role="img" aria-label="Logo Grabbber">
+                            <i class="fas fa-hand-pointer text-xl" aria-hidden="true"></i>
                         </div>
                         <span class="ml-2 text-xl font-bold text-blue-600">Grabbber</span>
                     </div>
@@ -145,14 +163,8 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#promo" class="animate-gradient-x bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-500 text-white px-4 py-2 rounded-md hover:shadow-xl transition duration-300">Promo</a>
                     <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <div class="group relative">
-                        <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                        <div class="hidden group-hover:block absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg">
-                            <a href="#grabbber" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grabbber</a>
-                            <a href="#grabbber-ai" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Grabbber AI Agents</a>
-                        </div>
-                    </div>
-                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-blue-600 transition">Blog</a>
+                    <a href="#mobile" class="text-gray-700 hover:text-blue-600 transition">Grabbber Mobile</a>
                     <div class="group relative">
                         <a href="insights.html" class="text-gray-700 hover:text-blue-600 transition">Insights</a>
                         <div class="hidden group-hover:block absolute z-50 mt-2 w-80 bg-white rounded-md shadow-lg p-4">
@@ -175,8 +187,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">The Best Free <span class="text-blue-200">Video Downloader</span> in the World</h1>
-                    <p class="text-xl mb-8 text-blue-100">Download videos from YouTube, Instagram, TikTok and many more with our completely free powerful tool.</p>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Free Chrome Extension for <span class="text-blue-200">Video Downloads</span></h1>
+                    <p class="text-xl mb-8 text-blue-100">Download videos from YouTube, Instagram, TikTok, Pornhub, Xvideos, and more. HD/4K quality guaranteed, no watermark.</p>
                     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                         <a href="#download" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium text-center hover:bg-blue-50 transition btn-glow">Install Extension</a>
                         <a href="#how-it-works" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-md font-medium text-center hover:bg-white hover:text-blue-600 transition">View Demos</a>
@@ -197,59 +209,45 @@
         </div>
     </section>
 
-    <!-- Platforms Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">Download from all your favorite platforms</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div class="flex flex-col items-center">
-                    <div class="platform-icon">
-                        <i class="fab fa-youtube text-5xl text-red-600"></i>
-                    </div>
-                    <span class="mt-2 font-medium">YouTube</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="platform-icon">
-                        <i class="fab fa-instagram text-5xl text-pink-600"></i>
-                    </div>
-                    <span class="mt-2 font-medium">Instagram</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="platform-icon">
-                        <i class="fab fa-tiktok text-5xl text-black"></i>
-                    </div>
-                    <span class="mt-2 font-medium">TikTok</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <div class="platform-icon">
-                        <i class="fa-solid fa-ban text-5xl text-red-300"></i>
-                    </div>
-                    <span class="mt-2 font-medium">Xvideos/Pornhub</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features Section -->
-    <section id="features" class="py-16 bg-gray-50">
+    <section id="features" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-4">Why Choose Grabbber?</h2>
-            <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">The simplest and most powerful solution to download videos from any website.</p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
-                    <div class="feature-icon mx-auto">
-                        <i class="fas fa-bolt text-2xl text-blue-600"></i>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Download Videos from All Platforms</h2>
+                <p class="text-xl text-gray-600">The best free online video downloader for all your needs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- YouTube -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="feature-icon text-red-600">
+                        <i class="fab fa-youtube text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-center mb-3">Instant Download</h3>
-                    <p class="text-gray-600 text-center">Download videos with a single click without leaving your current page. No need to open new tabs or apps.</p>
+                    <h3 class="text-xl font-semibold mb-4">YouTube Video Downloader</h3>
+                    <p class="text-gray-600">Download YouTube videos, shorts, and playlists in HD/4K quality. Safe and free YouTube downloader for PC, Mac, and online use. Supports MP4, MP3, and 1080p formats.</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition">
-                    <div class="feature-icon mx-auto">
-                        <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                <!-- Instagram -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="feature-icon text-pink-600">
+                        <i class="fab fa-instagram text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-center mb-3">Guaranteed Security</h3>
-                    <p class="text-gray-600 text-center">100% secure extension that doesn't collect any personal data. Your videos remain private.</p>
+                    <h3 class="text-xl font-semibold mb-4">Instagram HD Downloader</h3>
+                    <p class="text-gray-600">Best Instagram video downloader for stories, reels, and posts in HD 1080p. Download private Instagram videos, photos without watermark. Free online & Chrome extension available.</p>
+                </div>
+                <!-- TikTok -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="feature-icon text-black">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">TikTok Video Downloader</h3>
+                    <p class="text-gray-600">Download TikTok videos without watermark in highest quality. Save TikTok videos online with our free Chrome extension. HD/4K support.</p>
+                </div>
+                <!-- Adult Content -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
+                    <div class="feature-icon text-red-300">
+                        <i class="fa-solid fa-ban text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Adult Content Downloader</h3>
+                    <p class="text-gray-600">Premium video downloader for Pornhub and Xvideos content in HD/4K quality. Our Chrome extension enables fast, free downloads without watermark, supporting all video formats.</p>
                 </div>
             </div>
         </div>
@@ -342,19 +340,17 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Only Instagram and TikTok supported</span>
+                            <span>Only TikTok and Porhub/Xvideos supported</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
                             <span>Video quality: 
-                                <span class="quality-badge bg-gray-200 text-gray-800">144p</span>
-                                <span class="quality-badge bg-gray-200 text-gray-800">240p</span>
                                 <span class="quality-badge bg-gray-200 text-gray-800">360p</span>
                             </span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Ads included</span>
+                            <span>Low download</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-times-circle text-red-500 mr-2"></i>
@@ -378,19 +374,17 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>All supported platforms</span>
+                            <span>Instagram, Tiktok and Pornhub/Xvideos supported</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>Video quality: 
-                                <span class="quality-badge bg-blue-100 text-blue-800">720p</span>
-                                <span class="quality-badge bg-blue-100 text-blue-800">1080p</span>
-                                <span class="quality-badge bg-blue-100 text-blue-800">4K</span>
+                            <span>Video quality:
+                                <span class="quality-badge bg-blue-100 text-blue-800"> 1080p</span>
                             </span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>No ads</span>
+                            <span>Fast download</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-times-circle text-red-500 mr-2"></i>
@@ -407,6 +401,10 @@
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>Extension ownership</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
                             <span>Unlimited videos</span>
                         </li>
                         <li class="flex items-center">
@@ -420,10 +418,6 @@
                                 <span class="quality-badge bg-blue-100 text-blue-800">1080p</span>
                                 <span class="quality-badge bg-blue-100 text-blue-800">4K</span>
                             </span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            <span>No ads</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
@@ -477,6 +471,7 @@
                     <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
                     
                     <div class="space-y-4">
+                        <!-- FAQs existantes -->
                         <div class="border border-gray-200 rounded-lg overflow-hidden">
                             <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
                                 <span>Is Grabbber legal to use?</span>
@@ -484,6 +479,16 @@
                             </button>
                             <div class="p-4 hidden">
                                 <p class="text-gray-600">Grabbber is a legal tool that respects copyright. However, it is your responsibility to only download content for which you have rights or permission.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                                <span>Is Grabbber the best Chrome video downloader extension for YouTube, Instagram, and TikTok?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="p-4 hidden">
+                                <p class="text-gray-600">Yes, Grabbber is the ultimate free Chrome extension for downloading videos from YouTube, Instagram Reels, and TikTok. Our video downloader Chrome extension offers HD/4K quality downloads and supports all major platforms, making it the most versatile solution for your video downloading needs.</p>
                             </div>
                         </div>
                         
@@ -494,6 +499,16 @@
                             </button>
                             <div class="p-4 hidden">
                                 <p class="text-gray-600">We support only MP4 format for the moment.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                                <span>How to download TikTok videos without watermark using Grabbber?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="p-4 hidden">
+                                <p class="text-gray-600">With our Chrome extension, you can easily download TikTok videos without watermark in HD quality. Simply install Grabbber, navigate to any TikTok video, and use our one-click download feature to save videos watermark-free while maintaining original quality.</p>
                             </div>
                         </div>
 
@@ -525,6 +540,16 @@
                                 <p>With the lifetime plan, you're not just getting an extension - you're investing in a permanent solution for all your video downloading needs.</p>
                             </div>
                         </div>
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                                <span>Can I download adult content from Pornhub and Xvideos in HD/4K quality?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="p-4 hidden">
+                                <p class="text-gray-600">Yes, our Chrome video downloader extension fully supports HD and 4K video downloads from adult platforms like Pornhub and Xvideos. Premium users get unlimited downloads with guaranteed highest quality and fastest download speeds.</p>
+                            </div>
+                        </div>
                         
                         <div class="border border-gray-200 rounded-lg overflow-hidden">
                             <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
@@ -536,6 +561,16 @@
                                 <p class="text-gray-600"><strong>Grabbber AI Agents:</strong> Just describe the video you want, for example: "I want the official music video of God's Plan by Drake". Click "Research" and the AI will go through several steps including improving your description, searching, and finding the exact video. Once found, the video will be displayed, and you can click "Download" to start the downloading process and once downloaded, the video will be saved to your computer.</p>
                             </div>
                         </div>
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                                <span>How to download Instagram Reels and Stories with Grabbber Chrome extension?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="p-4 hidden">
+                                <p class="text-gray-600">Our free Chrome extension makes it easy to download Instagram Reels and Stories in high quality. Just browse Instagram, and Grabbber will automatically detect downloadable content. Click the download button to save Reels and Stories directly to your device in HD quality.</p>
+                            </div>
+                        </div>
                         
                         <div class="border border-gray-200 rounded-lg overflow-hidden">
                             <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
@@ -544,6 +579,16 @@
                             </button>
                             <div class="p-4 hidden">
                                 <p class="text-gray-600">Yes, both Grabbber and Grabbber AI Agents are free to use with a limit of 10 videos per day. You can upgrade to remove this limit and access additional features.</p>
+                            </div>
+                        </div>
+
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <button class="w-full text-left p-4 bg-gray-50 hover:bg-gray-100 transition font-medium flex justify-between items-center">
+                                <span>What makes Grabbber the fastest video downloader Chrome extension?</span>
+                                <i class="fas fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div class="p-4 hidden">
+                                <p class="text-gray-600">Grabbber is optimized for speed with our advanced download technology. Our Chrome extension supports batch downloading, auto-detection of video quality, and parallel processing, making it the fastest video downloader for YouTube, Instagram, TikTok, and adult content platforms.</p>
                             </div>
                         </div>
                     </div>
@@ -651,15 +696,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                 <div>
                     <div class="flex items-center mb-4">
-                        <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white">
-                            <i class="fas fa-hand-pointer"></i>
+                        <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white" role="img" aria-label="Logo Grabbber">
+                            <i class="fas fa-hand-pointer text-xl" aria-hidden="true"></i>
                         </div>
                         <span class="ml-2 text-xl font-bold">Grabbber</span>
                     </div>
                     <p class="text-gray-400">The ultimate tools to download videos from any website.</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="https://www.instagram.com/grabbber.site/#/" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@grabbber.channel/#/" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div>
